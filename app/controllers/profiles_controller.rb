@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
     #create profile linked to this specific user
     @profile = @user.build_profile(profile_params)
     if @profile.save
-      flash[:success] = "Profule updated!"
+      flash[:success] = "Profile updated!"
       redirect_to user_path(id: params[:user_id])
     else
       render action: :new
@@ -47,8 +47,9 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
     end
+    
     def only_current_user
-      @user = User.find( params[:user_id])
+      @user = User.find( params[:user_id] )
       redirect_to(root_url) unless @user == current_user
     end
 end
