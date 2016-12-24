@@ -36,7 +36,7 @@ This application also uses <a href="https://github.com/stripe/stripe-ruby">Strip
 
 # The Community
 
-<h3>Basic User Profile<h3>
+<h3>Basic User Profile</h3>
 <p>Basic users are only able to view certain information about other users</p>
 <img src="http://i.imgur.com/c929vlD.png"></img>
 
